@@ -1,0 +1,22 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    overflow: hidden; 
+  }
+
+  #square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 30%;
+    animation: moveSquare 5s linear infinite;
+  }
+
+  @keyframes moveSquare {
+    0% { left: 0; }
+    50% { left: calc(100% - 100px); } /* Adjusted to stay within the container */
+    100% { left: 0; }
+  }
